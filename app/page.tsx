@@ -8,25 +8,23 @@ export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const router = useRouter();
 
-
   const handleButtonClick = () => {
-    setShowPopup(true); 
+    setShowPopup(true);
   };
 
- 
   const handleConfirmation = (confirmed) => {
     if (confirmed) {
-      setHasReadText(true); 
+      setHasReadText(true);
     }
-    setShowPopup(false); 
+    setShowPopup(false);
   };
 
   useEffect(() => {
     if (hasReadText) {
       const timer = setTimeout(() => {
-        router.push("/book"); 
+        router.push("/book");
       }, 3000);
-      return () => clearTimeout(timer); 
+      return () => clearTimeout(timer);
     }
   }, [hasReadText, router]);
 
