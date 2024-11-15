@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(() => {
     if (hasReadText) {
       const timer = setTimeout(() => {
-        router.push("/book");
+        router.push("/books");
       }, 3000);
       return () => clearTimeout(timer);
     }
